@@ -10,7 +10,7 @@ import UserDash from './userApp/UserDash';
 function App() {
   return (
     <>
-    <div class="container-fluid">
+    <div className="container-fluid">
    <BrowserRouter>
    <Routes>
     <Route path="/" element={<Home /> } />
@@ -18,7 +18,7 @@ function App() {
     <Route path="/registration" element={<Registration />} />
      <Route path='/login' element={<Login />} />
      <Route path='/adlogin' element={<Adlogin/>} />
-     <Route path='/userDash' element={<UserDash/>} />
+     <Route path='/userDash/:id' element={<UserDash/>} />
    </Routes>
    </BrowserRouter>
    </div>

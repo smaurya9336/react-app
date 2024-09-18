@@ -20,6 +20,7 @@ export default function Login(){
       const data = await response.json();
       if(data.msg="Login Success"){
         alert("Login Success");
+        console.log(data.id);
         setEmail("");
         setPassword("");
         navigate(`/userDash/${data.id}`);
