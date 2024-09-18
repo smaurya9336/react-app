@@ -1,11 +1,12 @@
 import { useState } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 
 export default function Login(){
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const navigate= useNavigate()
     const logcode = async (e)=>{
         e.preventDefault();
         const user= {email,password};
@@ -21,6 +22,7 @@ export default function Login(){
         alert("Login Success");
         setEmail("");
         setPassword("");
+        navigate(`/userDash/${data.id}`);
       }
       else{
         alert(data.msg);
